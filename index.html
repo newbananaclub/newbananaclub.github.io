@@ -105,7 +105,7 @@
 	  }
     </style>
     <script type="text/javascript">
-      var d = new Date();
+      var d = new Date(new Date().getTime() - 24 * 60 * 60 * 1000);
       var year = d.getFullYear();
       var month = d.getMonth() + 1;
       if (month<10) {
@@ -159,7 +159,9 @@
 	          <h3>關於新香蕉</h3>
 	          <hr>
 			  <p>新香蕉俱樂部（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
-			  <p>新香蕉俱樂部星期一至星期五：12:00 - 2：00am<br/>Ben，妹頭，強尼，關逸基，塔羅小公主selina<div class="fb-like" data-href="http://newbananaclub.com/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div><br/><br/>
+			  <p>新香蕉俱樂部星期一至星期五：12:00 - 2：00am<br/>Ben，妹頭，強尼，關逸基，塔羅小公主selina<br><br>
+          <iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fnewbananaclub.com%2F&amp;width&amp;layout=button_count&amp;action=like&amp;show_faces=false&amp;share=true&amp;height=21&amp;appId=155786951179530" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:21px;" allowTransparency="true"></iframe>
+          <br/>
         <a href="https://twitter.com/share" class="twitter-share-button" data-via="colloquet" data-hashtags="新香蕉俱樂部" data-url="http://newbananaclub.com">Tweet</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script></p>
   		  </div>
   	  </div>
@@ -168,30 +170,30 @@
           <h3>節目重溫</h3>
           <hr>
           <div id="list">
-            <p align="center"><strong>今天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
+            <p align="center"><strong>昨天：<script type="text/javascript">document.write(today_day+" "+year+"年"+month+"月"+today_date+"日");</script></strong></p>
             <ul class="list-group today-list">
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第一節 (00:00 - 00:30)</a></h4>");
-                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0000.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第一節 (00:00 - 00:30)</a></h4>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0000.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第二節 (00:30 - 01:00)</a></h4>");
-                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0030.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第二節 (00:30 - 01:00)</a></h4>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0030.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第三節 (01:00 - 01:30)</a></h4>");
-                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0100.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第三節 (01:00 - 01:30)</a></h4>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0100.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
               <li class="list-group-item">
                 <script type="text/javascript">
-                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第四節 (01:30 - 02:00)</a></h4>");
-                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
+                  document.write("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0130.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第四節 (01:30 - 02:00)</a></h4>");
+                  document.write("<audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+today+"/997_"+today+"0130.mp3' type='audio/mpeg'></audio>");
                 </script>
               </li>
             </ul>
