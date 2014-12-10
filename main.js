@@ -35,10 +35,10 @@ if (d.getDay()==6||d.getDay()==0) {
 }
 
 $('#yesterday').html(today_day+" "+year+"年"+month+"月"+today_date+"日");
-$('#part-1').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第一節 (00:00 - 00:30)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
-$('#part-2').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第二節 (00:30 - 01:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
-$('#part-3').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第三節 (01:00 - 01:30)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
-$('#part-4').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' data-toggle='tooltip' data-placement='right' title='右鍵另存'>第四節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
+$('#part-1').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3'>第一節 (00:00 - 00:30)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0000.mp3' type='audio/mpeg'></audio>");
+$('#part-2').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3'>第二節 (00:30 - 01:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0030.mp3' type='audio/mpeg'></audio>");
+$('#part-3').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3'>第三節 (01:00 - 01:30)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0100.mp3' type='audio/mpeg'></audio>");
+$('#part-4').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
 
 $(function() {
   $('a').tooltip();
