@@ -41,7 +41,6 @@ $('#part-3').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomo
 $('#part-4').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3'>第四節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+tomorrow+"/997_"+tomorrow+"0130.mp3' type='audio/mpeg'></audio>");
 
 $(function() {
-  $('a').tooltip();
   $.datepicker.setDefaults({dateFormat: 'yy年mm月dd日'});
   $( "#datepicker" ).datepicker({
     maxDate: year + "年" + month + "月" + today_date + "日",
