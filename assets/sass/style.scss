@@ -1,0 +1,33 @@
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  font-family: "微軟正黑體", "Microsoft JhengHei", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  margin-bottom: 80px;
+  background-image: url(../../assets/images/logo.jpeg);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: bottom;
+}
+a {
+  color: #6954C8;
+  text-decoration:none;
+  outline: none;
+}
+a:hover {
+  color: #7e57c2;
+}
+.na {
+  display: none;
+}
+.ui-datepicker {
+  margin: 0 auto;
+}
+.panel1 {
+  padding: 15px 0;
+}
+h3, .today-list {
+  text-align: center;
+}
