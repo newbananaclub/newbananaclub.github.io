@@ -63,7 +63,11 @@ $(function() {
       var selectedDate = yy+mm+dd;
       var selected_day = weekday[minDate.getDay()-1];
       $("#list").fadeOut(function() {
-        $("#list").html("<p align='center'><strong>自選："+selected_day+" "+date+"</strong><br>（可右鍵另存方便日後收聽）</p><ul class='list-group today-list'><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節 (00:00 - 00:30)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節 (00:30 - 01:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>").fadeIn();
+        $("#list").html("<p align='center'><strong>自選："+selected_day+" "+date+"</strong><br>（可右鍵另存方便日後收聽）</p><ul class='list-group today-list'><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3'>第一節 (00:00 - 00:30)</a></h4><audio class='player' controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0000.mp3' type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3'>第二節 (00:30 - 01:00)</a></h4><audio class='player' controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0030.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3'>第三節 (01:30 - 02:00)</a></h4><audio class='player' controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0100.mp3' type='audio/mpeg'></audio></li><li class='list-group-item'><h4><a href='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3'>第四節 (01:30 - 02:00)</a></h4><audio class='player' controls='controls' preload='none'><source src='http://testmp3.http.akamai-trials.com/997/"+selectedDate+"/997_"+selectedDate+"0130.mp3' type='audio/mpeg'></audio></li></ul>").fadeIn(function() {
+            $('audio').on('ended', function() {
+              $(this).closest('li').next().find('.player').trigger('play');
+            });
+        });
       });
     }
   });
@@ -78,5 +82,4 @@ function disableSpecificWeekDays(date) {
 
 $('audio').on('ended', function() {
   $(this).closest('li').next().find('.player').trigger('play');
-  console.log('hide');
 });
