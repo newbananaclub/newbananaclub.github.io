@@ -48,11 +48,10 @@ audio {
 	}
 
 	table tr td {
-
-		&.active {
+		&.active, span.active {
 			background-image: -webkit-gradient(linear,0 0,0 100%,from($anchor-color),to($anchor-color));
 			background-image: -webkit-linear-gradient(top,$anchor-color,$anchor-color);
-			
+
 			&:hover, &.disabled:hover {
 				background-image: -webkit-gradient(linear,0 0,0 100%,from($anchor-color),to($anchor-color));
 				background-image: -webkit-linear-gradient(top,$anchor-color,$anchor-color);
