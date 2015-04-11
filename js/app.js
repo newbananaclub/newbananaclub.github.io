@@ -3,7 +3,7 @@ var datepicker = $('.js-datepicker');
 datepicker.datepicker({
 	format: "yyyy年mm月dd日",
     weekStart: 0,
-    startDate: "-90d",
+    startDate: "-120d",
     endDate: "-1d",
     language: "zh-TW",
     keyboardNavigation: false,
