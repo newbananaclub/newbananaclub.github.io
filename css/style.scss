@@ -1,0 +1,72 @@
+// NewBananaApp
+
+$anchor-color: #7e57c2;
+
+html, body {
+	position: relative;
+	min-height: 100%;
+	font-family: Microsoft JhengHei,HelveticaNeue-Light,Helvetica Neue Light,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+}
+
+body {
+	background: url('../img/bg.jpg');
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: bottom;
+	margin-bottom: 80px;
+}
+
+a {
+	color: $anchor-color;
+
+	&:hover {
+		color: darken($anchor-color, 20%);
+	}
+}
+
+audio {
+	width: 100%;
+}
+
+.playlist {
+	padding-left: 0;
+	list-style: none;
+	text-align: center;
+}
+
+// Datepicker override
+.datepicker-inline {
+	margin: 0 auto;
+	max-width: 245px;
+	width: 100%;
+}
+
+
+.datepicker{
+	td, th {
+		width: 34px;
+	}
+
+	table tr td {
+
+		&.active {
+			background-image: -webkit-gradient(linear,0 0,0 100%,from($anchor-color),to($anchor-color));
+			background-image: -webkit-linear-gradient(top,$anchor-color,$anchor-color);
+			
+			&:hover, &.disabled:hover {
+				background-image: -webkit-gradient(linear,0 0,0 100%,from($anchor-color),to($anchor-color));
+				background-image: -webkit-linear-gradient(top,$anchor-color,$anchor-color);
+			}
+		}
+
+		&.disabled {
+			color: #ccc;
+
+			&:hover {
+				color: #ccc;
+			}
+		}
+	}
+}
+
+

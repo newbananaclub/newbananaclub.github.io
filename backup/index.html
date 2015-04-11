@@ -1,11 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>新香蕉俱樂部</title>
-	<meta name="description" content="在此收聽新香蕉俱樂部節目重溫。" />
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>新香蕉俱樂部節目重溫</title>
+    <meta name="description" content="在此收聽新香蕉俱樂部節目重溫。" />
     <base target="_blank">
     <!-- Twitter Card data -->
     <meta name="twitter:card" content="summary">
@@ -23,6 +24,10 @@
     <meta property="og:description" content="在此收聽新香蕉俱樂部節目重溫。" />
     <meta property="og:site_name" content="新香蕉俱樂部節目重溫" />
     <meta property="fb:admins" content="649775864" />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="jquery-ui.css" />
+    <link rel="stylesheet" href="build/css/style.css" />
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -30,19 +35,16 @@
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
-	<!-- Stylesheets -->
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/bootstrap-datepicker.min.css">
-	<link rel="stylesheet" href="css/style.css">
 </head>
-<body>
 
-	<div class="main container">
-		<div class="row">
-			<div class="col-sm-12 col-md-4">
-				<h3 class="text-center">新香蕉俱樂部</h3>
-				<hr>
-				<p><a href="https://www.facebook.com/NewBananaClub" target="_blank">新香蕉俱樂部</a>（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
+<body>
+	<!-- <div class="announcement" style="text-align: center;background: #f5f5f5;padding: 10px 0;"><span class="glyphicon glyphicon-bullhorn"></span>&nbsp;&nbsp;祝各位蕉友新年快樂！</div> -->
+    <div class="container">
+        <div class="col-md-4">
+            <div class="panel1">
+                <h3>新香蕉俱樂部</h3>
+                <hr>
+                <p><a href="https://www.facebook.com/NewBananaClub" target="_blank">新香蕉俱樂部</a>（英文：New Banana Club）為新城知訊台 的一個phone-in節目，內容以嬉笑手法解決聽眾的感情問題為主，為同時段各大電台中的冠軍收聽率長壽節目。</p>
                 <p>新香蕉俱樂部星期一至星期五：12:00 - 2：00am
                     <br/>
                     <a href="https://www.facebook.com/pages/Ben-To-杜浚斌/159459734178875" target="_blank">Ben</a>，<a href="https://www.facebook.com/muitaumuitau" target="_blank">妹頭</a>，強尼，<a href="https://www.facebook.com/cliftonkwanYK" target="_blank">關逸基</a>，<a href="https://www.facebook.com/tarot.selina" target="_blank">塔羅小公主selina</a>
@@ -64,54 +66,42 @@
                     }
                 }(document, 'script', 'twitter-wjs');
                 </script>
-			</div>
-			<div class="col-sm-6 col-md-4 col-sm-push-6 col-md-push-4">
-				<h3 class="text-center">選擇日期</h3>
-				<hr>
-				<div class="js-datepicker"></div>
-			</div>
-			<div class="col-sm-6 col-md-4 col-sm-pull-6 col-md-pull-4">
-				<h3 class="text-center">節目重溫</h3>
-				<hr>
-				<div class="playlist-container">
-					<p class="text-center"><strong>日期：<span class="date"></span></strong><br>（可右鍵另存方便日後收聽）</p>
-					<ul class="list-group playlist">
-						<li class="list-group-item">
-							<a href="">
-								<h4>第一節 (00:00 - 00:30)</h4>
-							</a>
-							<audio controls='controls' preload='none' class='player'><source src="" type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>
-						</li>
-						<li class="list-group-item">
-							<a href="">
-								<h4>第二節 (00:30 - 01:00)</h4>
-							</a>
-							<audio controls='controls' preload='none' class='player'><source src="" type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>
-						</li>
-						<li class="list-group-item">
-							<a href="">
-								<h4>第三節 (01:00 - 01:30)</h4>
-							</a>
-							<audio controls='controls' preload='none' class='player'><source src="" type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>
-						</li>
-						<li class="list-group-item">
-							<a href="">
-								<h4>第四節 (01:30 - 02:00)</h4>
-							</a>
-							<audio controls='controls' preload='none' class='player'><source src="" type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
-
-	<!-- Scripts -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/bootstrap-datepicker.min.js"></script>
-	<script src="js/bootstrap-datepicker.zh-TW.min.js"></script>
-	<script src="js/app.js"></script>
-	<script> 
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-md-push-4 col-sm-push-6">
+            <div class="panel1">
+                <h3>選擇日期</h3>
+                <hr>
+                <div id="datepicker"></div>
+            </div>
+        </div>
+        <div class="col-md-4 col-sm-6 col-md-pull-4 col-sm-pull-6">
+            <div class="panel1">
+                <h3>節目重溫</h3>
+                <hr>
+                <div id="list">
+                    <p align="center"><strong><span id="date"></span></strong>
+                        <br>（可右鍵另存方便日後收聽）
+                    </p>
+                    <ul class="list-group today-list">
+                        <li class="list-group-item" id="part-1">
+                        </li>
+                        <li class="list-group-item" id="part-2">
+                        </li>
+                        <li class="list-group-item" id="part-3">
+                        </li>
+                        <li class="list-group-item" id="part-4">
+                        </li>
+                    </ul>
+                    <p class="na"><span class="glyphicon glyphicon-exclamation-sign"></span> 新香蕉俱樂部只在星期一至五播出，請選擇日期重溫。</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/jquery-ui/jquery-ui.js"></script>
+    <script src="build/js/main.min.js"></script>
+    <script> 
     var $buoop = {c:2}; 
     function $buo_f(){ 
      var e = document.createElement("script"); 
@@ -138,4 +128,5 @@
     ga('send', 'pageview');
     </script>
 </body>
+
 </html>
