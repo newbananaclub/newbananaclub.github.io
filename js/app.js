@@ -11,8 +11,14 @@ datepicker.datepicker({
 });
 
 // On initialize
-datepicker.datepicker('update', '-1d');
-updatePlaylist();
+today = new Date();
+if (today.getDay() == 0 || today.getDay() == 1) {
+	$('.playlist-container').hide();
+} else {
+	$('.na').hide();
+	datepicker.datepicker('update', '-1d');
+	updatePlaylist();
+}
 
 // On change of dates
 datepicker.datepicker().on('changeDate', function(e) {
