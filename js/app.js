@@ -23,6 +23,7 @@ if (today.getDay() == 0 || today.getDay() == 1) {
 // On change of dates
 datepicker.datepicker().on('changeDate', function(e) {
 	// updatePlaylist();
+	$('.na').hide();
 	$('.playlist-container').fadeOut(function() {
 		updatePlaylist();
 	}).fadeIn();
