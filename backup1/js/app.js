@@ -12,6 +12,7 @@ datepicker.datepicker({
 
 // On initialize
 today = new Date();
+console.log(today);
 if (today.getDay() == 0 || today.getDay() == 1) {
 	$('.playlist-container').hide();
 } else {
