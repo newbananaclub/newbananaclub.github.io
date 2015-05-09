@@ -91,3 +91,8 @@ init(today);
 $('audio').on('ended', function() {
     $(this).closest('li').next().find('.player').trigger('play');
 });
+
+// When one is playing, automatically pause the others
+$('audio').on('play', function() {
+    $('audio').not(this).trigger('pause');
+});
