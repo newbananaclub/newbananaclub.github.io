@@ -18,6 +18,9 @@ function init(date) {
     $('#part-2').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0030.mp3'>第二節 (00:30 - 01:00)</a></h4><audio controls='controls' preload='none' class='player'><source src='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0030.mp3' type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>");
     $('#part-3').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0100.mp3'>第三節 (01:00 - 01:30)</a></h4><audio controls='controls' preload='none' class='player'><source src='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0100.mp3' type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>");
     $('#part-4').html("<h4><a href='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0130.mp3'>第四節 (01:30 - 02:00)</a></h4><audio controls='controls' preload='none' class='player'><source src='http://testmp3.http.akamai-trials.com/997/" + date + "/997_" + date + "0130.mp3' type='audio/mpeg'>你的瀏覽器不支援此播放功能</audio>");
+    $('audio').on('play', function() {
+	    $('audio').not(this).trigger('pause');
+	});
 }
 
 // When user pick a date, update list
@@ -64,7 +67,3 @@ $('audio').on('ended', function() {
     $(this).closest('li').next().find('.player').trigger('play');
 });
 
-// When one is playing, automatically pause the others
-$('audio').on('play', function() {
-    $('audio').not(this).trigger('pause');
-});
