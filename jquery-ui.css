@@ -234,7 +234,7 @@
 }
 
 .ui-widget-content {
-  background: white url(assets/images/ui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x;
+  /*background: white url(assets/images/ui-bg_glass_75_ffffff_1x400.png) 50% 50% repeat-x;*/
   color: #404040;
 }
 

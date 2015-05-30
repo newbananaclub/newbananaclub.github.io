@@ -23,6 +23,7 @@ function init(date) {
 // When user pick a date, update list
 $(function() {
     $("#datepicker").datepicker({
+    	defaultDate: -1,
         maxDate: new Date(),
         minDate: '-90d',
         beforeShowDay: disableSpecificWeekDays,
