@@ -27,7 +27,7 @@ function init(date) {
 $(function() {
     $("#datepicker").datepicker({
     	defaultDate: -1,
-        maxDate: new Date(),
+        maxDate: '-1d',
         minDate: '-90d',
         beforeShowDay: disableSpecificWeekDays,
         onSelect: function(date) {
