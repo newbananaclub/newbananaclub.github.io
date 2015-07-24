@@ -1,26 +1,25 @@
+$link-color: #6954c8;
+
 html {
     position: relative;
     min-height: 100%;
 }
 
 body {
-    font-family: "Roboto", "微軟正黑體", "Microsoft JhengHei", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-family: 'Roboto', '微軟正黑體', 'Microsoft JhengHei', 'Helvetica Neue', 'Helvetica', 'Arial', 'Lucida Grande', sans-serif;
     margin-bottom: 80px;
-    background-image: url(../../assets/images/logo.jpeg);
-    background-size: 100% auto;
+    background-image: url('../../assets/images/background.jpeg');
+    background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom;
 }
 
 a {
-    color: #6954C8;
-    text-decoration: none;
-    outline: none;
-    cursor: pointer;
-}
+    color: $link-color;
 
-a:hover {
-    color: #7e57c2;
+    &:hover {
+        color: $link-color;
+    }
 }
 
 .na {
@@ -54,35 +53,35 @@ audio {
 
     td .ui-state-default {
         margin: 0 auto;
-        -webkit-transition: all .2s ease;
-        -moz-transition: all .2s ease;
-        transition: all .2s ease;
+        -webkit-transition: all 0.2s ease;
+        -moz-transition: all 0.2s ease;
+        transition: all 0.2s ease;
         border-radius: 50%;
         height: 36px;
         width: 36px;
         line-height: 2;
     }
+
+    .ui-datepicker-prev,
+    .ui-datepicker-next {
+        top: 0;
+        height: 100%;
+    }
+
+    .ui-datepicker-prev {
+        left: 5px;
+    }
+
+    .ui-datepicker-next {
+        right: 5px;
+    }
 }
 
 .list-group-item {
-  border: 1px solid #eee;
-}
+    border: 1px solid #eee;
 
-.list-group-item:first-child,
-.list-group-item:last-child {
-  border-radius: 0;
-}
-
-.ui-datepicker .ui-datepicker-prev,
-.ui-datepicker .ui-datepicker-next {
-	top: 0;
-	height: 100%;
-}
-
-.ui-datepicker .ui-datepicker-prev {
-	left: 5px;
-}
-
-.ui-datepicker .ui-datepicker-next {
-	right: 5px;
+    &:first-child,
+    &:last-child {
+        border-radius: 0;
+    }
 }

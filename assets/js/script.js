@@ -2,15 +2,9 @@
 moment.locale('zh-TW');
 
 // Get today's date - as New Banana Club starts at 00:00
-var today = moment().format('YYYYMMDD');
-var yesterday_day = moment().subtract(1, 'days').format('dddd');
-var yesterday_calendar = moment().subtract(1, 'days').format('L');
-
-// If yesterday is Sat or Sun, hide list and show message
-if (moment().subtract(1, 'days').format('d') == 6 || moment().subtract(1, 'days').format('d') == 0) {
-    $('.today-list').css("display", "none");
-    $('.na').css("display", "block");
-}
+var today = moment().format('YYYYMMDD'),
+    yesterday_day = moment().subtract(1, 'days').format('dddd'),
+    yesterday_calendar = moment().subtract(1, 'days').format('L');
 
 // Insert link with given date
 function init(date) {
@@ -23,32 +17,6 @@ function init(date) {
 	});
 }
 
-// When user pick a date, update list
-$(function() {
-    $("#datepicker").datepicker({
-    	defaultDate: -1,
-        maxDate: '-1d',
-        minDate: '-90d',
-        beforeShowDay: disableSpecificWeekDays,
-        onSelect: function(date) {
-            var selectedDate = moment($(this).datepicker('getDate')).add(1, 'days').format('YYYYMMDD');
-            var selectedDay = moment($(this).datepicker('getDate')).format('dddd');
-            var selectedCalendar = moment($(this).datepicker('getDate')).format('L');
-            $("#list").fadeOut(function() {
-                $('#date').html("自選：" + selectedDay + " " + selectedCalendar);
-                init(selectedDate);
-                $('.today-list').css("display", "block");
-                $('.na').css("display", "none");
-                $("#list").fadeIn(function() {
-                    $('audio').on('ended', function() {
-                        $(this).closest('li').next().find('.player').trigger('play');
-                    });
-                });
-            });
-        }
-    });
-});
-
 // Disable weekends on datepicker
 function disableSpecificWeekDays(date) {
     if (date.getDay() == 0 || date.getDay() == 6) {
@@ -58,11 +26,41 @@ function disableSpecificWeekDays(date) {
     }
 }
 
-$('#date').html("昨天：" + yesterday_day + ' ' + yesterday_calendar);
-
-init(today);
+// When user pick a date, update list
+$("#datepicker").datepicker({
+	defaultDate: -1,
+    maxDate: '-1d',
+    minDate: '-90d',
+    beforeShowDay: disableSpecificWeekDays,
+    onSelect: function(date) {
+        var selectedDate = moment($(this).datepicker('getDate')).add(1, 'days').format('YYYYMMDD');
+        var selectedDay = moment($(this).datepicker('getDate')).format('dddd');
+        var selectedCalendar = moment($(this).datepicker('getDate')).format('L');
+        $("#list").fadeOut(function() {
+            $('#date').html("自選：" + selectedDay + " " + selectedCalendar);
+            init(selectedDate);
+            $('.today-list').css("display", "block");
+            $('.na').css("display", "none");
+            $("#list").fadeIn(function() {
+                $('audio').on('ended', function() {
+                    $(this).closest('li').next().find('.player').trigger('play');
+                });
+            });
+        });
+    }
+});
 
 // Auto play next part
 $('audio').on('ended', function() {
     $(this).closest('li').next().find('.player').trigger('play');
 });
+
+// If yesterday is Sat or Sun, hide list and show message
+if (moment().subtract(1, 'days').format('d') == 6 || moment().subtract(1, 'days').format('d') == 0) {
+    $('.today-list').css("display", "none");
+    $('.na').css("display", "block");
+}
+
+$('#date').html("昨天：" + yesterday_day + ' ' + yesterday_calendar);
+
+init(today);
