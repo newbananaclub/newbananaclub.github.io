@@ -17,6 +17,7 @@ gulp.task('serve', ['sass'], function() {
 gulp.task('sass', function () {
   gulp.src('assets/sass/*.scss')
     .pipe(sass.sync({outputStyle: 'compressed'}).on('error', sass.logError))
+    .pipe(concat('main.css'))
     .pipe(gulp.dest('build/css/'))
     .pipe(browserSync.stream());
 });
