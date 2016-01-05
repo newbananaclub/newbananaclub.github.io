@@ -30,6 +30,7 @@ function disableSpecificWeekDays(date) {
 $("#datepicker").datepicker({
 	defaultDate: -1,
     maxDate: '-1d',
+    // maxDate: new Date(2016,0,7),
     minDate: '-90d',
     beforeShowDay: disableSpecificWeekDays,
     onSelect: function(date) {
