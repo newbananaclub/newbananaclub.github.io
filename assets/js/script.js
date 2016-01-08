@@ -19,7 +19,7 @@ function init(date) {
 
 // Disable weekends on datepicker
 function disableSpecificWeekDays(date) {
-    if (date.getDay() == 0 || date.getDay() == 6) {
+    if (date.getDay() === 0 || date.getDay() === 6) {
         return [false];
     } else {
         return [true];
@@ -29,8 +29,8 @@ function disableSpecificWeekDays(date) {
 // When user pick a date, update list
 $("#datepicker").datepicker({
 	defaultDate: -1,
-    maxDate: '-1d',
-    // maxDate: new Date(2016,0,7),
+    // maxDate: '-1d',
+    maxDate: new Date(2016,0,7),
     minDate: '-90d',
     beforeShowDay: disableSpecificWeekDays,
     onSelect: function(date) {
@@ -57,7 +57,7 @@ $('audio').on('ended', function() {
 });
 
 // If yesterday is Sat or Sun, hide list and show message
-if (moment().subtract(1, 'days').format('d') == 6 || moment().subtract(1, 'days').format('d') == 0) {
+if (moment().subtract(1, 'days').format('d') == 6 || moment().subtract(1, 'days').format('d') === 0) {
     $('.today-list').css("display", "none");
     $('.na').css("display", "block");
 }
